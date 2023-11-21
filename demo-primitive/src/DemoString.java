@@ -16,11 +16,16 @@ public class DemoString {
     // Step 2: System.out.println() -> Print out
     System.out.println("hello" + " " + "world"); // "hello world"
 
+    // .length() -> String裡面的value
     String str1 = "hello";
     System.out.println(str1); // "hello"
     System.out.println(str1. length()); //5
-
+    str1 = str1 + "world";
+    System.out.println(str1. length()); //10
+    str1 += "!!!";
+    System.out.println(str1. length()); //13
 
     // No "-", "*", "/" in String
+    // String supports "+", "+="
   }
 }

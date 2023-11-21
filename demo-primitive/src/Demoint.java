@@ -50,7 +50,7 @@ public class Demoint {
     level--; //5
     --level; //4
 
-    // the remainder of 5 / 2 -> 1 餘數
+    // the remainder of 5 % 2 -> 1    //% = 餘數
     int remainder = 5 % 2 ; // 1
     System.out.println("remainder" + remainder);
     
@@ -86,7 +86,7 @@ public class Demoint {
     System.out.println("there are "+out+ " person in the room."); // if the value is in the range then still can run
 
 
-    int resut =  (5 + 5)  / 10 % 5;
+    int resut = 20 % 18;
     System.out.println("resut=" + resut);
 
 
