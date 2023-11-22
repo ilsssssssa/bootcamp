@@ -10,7 +10,7 @@ public class DemoDouble {
     double d4 = 19999.31123912302110109;
     System.out.println(d4);// 19999.31123912302 小數點多
 
-    float f2 = 1999.31123912302110109f;
+    float f2 = 19999.31123912302110109f;
     System.out.println(f2);// 1999.3113 小數點小
     
 
