@@ -5,8 +5,6 @@ public class DemoBoolean {
     System.out.println(isHoliday);
 
 
-
-
-  }
+ }
   
 }

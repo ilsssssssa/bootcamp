@@ -6,7 +6,7 @@ public class DemoChar {
     char c3 = ' ';
     char c4 = '#';
     char c5 = '1';
-    // char c6 = "10"; // syntax句法 error, string -> char
+    // char c6 = "10"; // syntax句法 error, char only use '' 
     // char c7 = '10'; // syntax error, char value should be single character
     // char c8 = ' '; // syntax error, char has to be at least one character
     char c9 = '笑';
