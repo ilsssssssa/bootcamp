@@ -207,9 +207,28 @@ public class DemoOperator {
    // } 
    // totalAmount = itemTotal + transportation Fee;
    // System.out.println("Total Amount=" + totalAmount); 
-       
 
-
+    // >, <, >=, <=, !
+    boolean isPassed = false;
+    if (!isPassed) { // == false
+    System.out.println("isPassed is false");
+    }
+    isPassed = true; // re-assignment
+    if (isPassed) { // true
+    System.out.println("isPassed is true");
+    }
+ 
+    String str = "www.apple.com";
+    if (str.length() < 10 || "www.apple.com".equals(str)) {
+      System.out.println("length < 10 or www.apple.com");
+    }
+      
+    String s = ""; // emtpy string, length = 0
+    System.out.println(s.length()); // 0
+    s += "hello";
+    if (!s.isEmpty()){
+      System.out.println("s is NOT empty");
+    }
 
 
 
