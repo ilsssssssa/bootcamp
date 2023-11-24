@@ -95,20 +95,45 @@ public class DemoForLoop {
         // sum up all odd number (0-100)
         // i) sum <= 200
         // The loop should be ended at which number if i?
-        int i = 0;
+        int j = 0;
         int sum3 = 0;
-
-        for (i = 0; i < 101; i++){
+        for (j = 0; j < 101; j++){
             
-            if( i % 2 == 1){ 
-                sum3 += i;   
+            if( j % 2 == 1){ 
+                sum3 += j;   
             }
-            if (sum3 <= 200 && (sum3 + i) > 200){
+            if (sum3 + j > 200){
                 break;
             }
         }
-               
-        System.out.println("i = "+i+" sum3 = "+sum3);
+            System.out.println("i = "+ j + " sum3 = "+sum3);
+
+
+
+        String str = "abv pol ijk def xyz";
+        char target = 'y';
+        int n = 0;
+        boolean found = false;
+
+        for(int i = 0; i < str.length(); i++) { // charAt(i)
+            if(str.charAt(i) == target) {
+                n = i + 1;
+                found = true;
+                break;
+            }
+        }
+        if (found){
+            System.out.println("Found " + target + " at the " + n + "th character") ;
+        } else {
+            System.out.println("Not found");
+        }
+        
+
+        
+
+
+
+
 
 
 
