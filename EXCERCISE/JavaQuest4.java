@@ -26,8 +26,8 @@ public class JavaQuest4 {
         break;
       }
       if ( i % 2 == 0 && i % 3 == 0 && i > 0 ){
+        num ++;
       System.out.println(i);
-      num ++;
    }
   }
 }
