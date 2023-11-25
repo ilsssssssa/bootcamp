@@ -29,6 +29,11 @@ public class DemointArray {
     
     double [] arr4 = new double [] {1.2, 4.9, 4.3, 23.0};
 
+    // 8 primitives + String
+    // char[]
+    // boolean[]
+    // String[]i
+
     System.out.println(arr2.length); // 5
 
     arr2 = new int [10];
@@ -38,7 +43,8 @@ public class DemointArray {
 
     int b = 100;
     b = 1000;
-    System.out.println(b);
+    System.out.println(b); // int will pop up two ans 100&1000 together
+                           // array will get two different answers
 
     }
 }
