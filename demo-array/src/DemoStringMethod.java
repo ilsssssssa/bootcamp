@@ -1,10 +1,12 @@
 public class DemoStringMethod {
   public static void main(String[] args) {
-     String str = "hello world...";
-     // emtpy
+     String str = "hello world!";
+     // isEmtpy()
      if (str.isEmpty()) {
-      System.out.println("String=" + str);
+       System.out.println("String=" + str);
      }
+
+     //length()
      System.out.println("str length="+ str.length());
 
 
@@ -41,6 +43,8 @@ public class DemoStringMethod {
      System.out.println(str.trim()); // "hello world"
      System.out.println(newStr.trim()); // "ll"
 
+
+     // Upper&Lower Case
      String s2 = "HEllo, woRld!!";
      System.out.println(s2.toUpperCase()); // "HELLO, WORLD!!"
      System.out.println(s2.toLowerCase()); // "hello world!!"
@@ -126,7 +130,8 @@ public class DemoStringMethod {
      String result3 = s5.toUpperCase().substring(3, 5); // BC
      System.out.println(result3);
 
-     String result4 = s5.toUpperCase()
+     String result4 = s5.toUpperCase().substring(1, 2).concat("ijk");
+     System.out.println(result4); // Bijk
 
 
 

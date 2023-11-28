@@ -22,7 +22,7 @@ public class DemoIntArray {
 
     int a; // local variable
     a = 1; // explicitly assignment
-    System.out.println(a); // tou have to expicitly assign value before using it
+    System.out.println(a); // you have to expicitly assign value before using it
 
     int [] arr2 = new int [5];
     int [] arr3 = new int [] {100, 5, 30, 9, -40};
@@ -63,8 +63,8 @@ public class DemoIntArray {
         if (i > 0){
             System.out.print(" "); // 3 2 1 
         }
-
-    }
+   }
+            System.out.println(" "); // add space after the answer
 
     String str = "hello"; // str is storing the address of String object hello
     String str2 = new String("hello"); // str2 is storing the address of String object
