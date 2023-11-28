@@ -39,6 +39,7 @@ public class DemoIntArray3 {
 
 
     // Find Max Value, and move to the tail
+    // Approach 1
     int[] arr3 = new int[] {100, 4, 1050, 500, -20};
     // Loop - Find Max ???
     // Move the tail ??
