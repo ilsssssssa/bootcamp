@@ -45,13 +45,41 @@ public class DemoWhileLoop {
         int e = 0;
 
         while (e <= 1000) {
-         a2 = a1;
-         a1 = e;
-        e = a1 + a2;
-        if (e < 1000)
-        System.out.print(e + " ");
-    } 
-    // Approach 2
+            a2 = a1;
+            a1 = e;
+            e = a1 + a2;
+            if (e < 1000)
+                System.out.print(e + " ");
+        }
+
+        // Approach 2
+        a2 = 0;
+        a1 = 1;
+        e = -1;
+        while (true) {
+            e = a1 + a2;
+            if (e > 1000) {
+                e -= a2;
+                break;
+            }
+            a2 = a1;
+            a1 = e;
+        }
+        System.out.println("e=" + a1);
+
+        int num = 1;
+        while (num < 3 || num > 5) {
+            num++;
+            System.out.println(num);
+        }
+
+        boolean isOverLimit = false;
+        int limit = 0;
+        while (!isOverLimit) {
+            if (++limit > 100)
+                isOverLimit = true;
+        }
+
 
     }
 }
