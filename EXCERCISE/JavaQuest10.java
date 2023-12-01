@@ -28,7 +28,16 @@ public class JavaQuest10 {
     System.out.println("Original Array : " + Arrays.toString(my_array));
 
     // code here
+    int num = 0;
+    for (int i = 0; i < my_array.length; i++) {
+      if(indexPosition <= i) {
+        num = my_array[i];
+       my_array[i] = newValue;
+       newValue = num;
+      } 
+    }
 
     System.out.println("New Array: " + Arrays.toString(my_array));
   }
+
 }
