@@ -10,7 +10,7 @@ public class Circle {
   public Circle(double radius) {
     this.radius = radius;
   }
-
+  // Setter
   public void setRadius(double radius) {
     this.radius = radius;
   }
@@ -18,20 +18,16 @@ public class Circle {
   public double getRadius() {
     return this.radius;
   }
-
+// Instance methods
   public double diameter() { //直徑  (=半徑*2)
-    double diameter = radius * 2;
-    return diameter;
+    return this.radius * 2; // double * int
   }
 
   public double area() { // 半徑*半徑*pi
-    double area = radius * radius * 3.14;
-    return area;
+    // return this. radius * this.radius * 3.14
+    // Math library
+    return Math.pow(this.radius, 2) * Math.PI;
   }
-
-
-
-
 
 
 
@@ -45,6 +41,17 @@ public class Circle {
 
     Circle circle2 = new Circle(3.4d);
     System.out.println(circle2.getRadius()); // 3.4
+
+
+
+    double diameter1 = circle.diameter();
+    double area1 = circle.area();
+
+    System.out.println("Circle 1 diameter= " + diameter1);
+    System.out.println("Circle 1 area= " + area1);
+
+    // Pass by reference circle2 -> same value of circle now.
+    circle = circle2;
 
   }
 
