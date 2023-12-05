@@ -60,6 +60,8 @@ public class DemoMath {
     System.out.println(random2);
 
    // int x = 3.5 + 4;
+
+   // Special Scenario:
    int y = 7;
    y += 3.5; // implicitly隱含 downcast
   // y = y +3.5; NOT WORKING

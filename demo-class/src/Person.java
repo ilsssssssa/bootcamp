@@ -6,10 +6,9 @@ public class Person {
 
     private String firstName;
     private String lastName;
-
-
     private int age; // Default 0 如果唔比數字
 
+    
     // Constructor (Produce Person's object)
     public Person() {
 

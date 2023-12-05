@@ -49,6 +49,7 @@ public class Circle {
 
     System.out.println("Circle 1 diameter= " + diameter1);
     System.out.println("Circle 1 area= " + area1);
+    
 
     // Pass by reference circle2 -> same value of circle now.
     circle = circle2;
