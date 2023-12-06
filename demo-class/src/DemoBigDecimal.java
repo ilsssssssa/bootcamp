@@ -72,9 +72,9 @@ public class DemoBigDecimal { //solving double & float problem
       System.out.println(a1 == a2); // false
 
       // 四捨五入
-      System.out.println(sum(0.554, 0.111, 2, RoundingMode.HALF_UP));
+      System.out.println(sum(0.554, 0.111, 2, RoundingMode.HALF_UP)); // 0.67
       // 五捨六入
-      System.out.println(sum(0.554, 0.111, 2, RoundingMode.HALF_DOWN));
+      System.out.println(sum(0.554, 0.111, 2, RoundingMode.HALF_DOWN)); // 0.66
   }
 
   public static double sum(double d1, double d2) {

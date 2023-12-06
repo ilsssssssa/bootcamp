@@ -8,8 +8,8 @@ public class Person {
     private String lastName;
     private int age; // Default 0 如果唔比數字
 
-    
-    // Constructor (Produce Person's object)
+
+    // Empty Constructor (Produce Person's object)
     public Person() {
 
     }
@@ -29,7 +29,17 @@ public class Person {
         this.firstName = firstName;
     }
 
+    // Instance Method
+    // 1. Belongs to the object (Person p1 = new Person(); p1.swim();)
+    // 2. Able to control the instance variable by "this"
+
+    // Static Method
+    // 1. Belongs to the class (ClassName.staticMethod() -> Person.swim(3))
+    // 2. Not able to read/write instance variable
+    // 3. The return value completely derived衍生 by the input parameters
+
     // Instance Method (Object method)
+    // Setter
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -79,6 +89,24 @@ public class Person {
         return this.age;
     }
 
+    public static void swimming() {
+        System.out.println("I'm swimming");
+    }
+
+    public void swim() { // void method can be with "return" or without "return"
+        int a = 1;
+        if (a > 2)
+            return;
+        System.out.println(this.firstName + " is swimming.");
+    }
+
+    public int eat() { // int method has to be with "return" keyword
+        int b = 10;
+        if (b < 12)
+            return 100;
+        return -1;
+    }
+
 
 
     public static void main(String[] args) {
@@ -113,6 +141,17 @@ public class Person {
         System.out.println("p5 full name= " + p5.getFullName(true)); // boolean ALL UPPERCASE
         System.out.println("p5 full name= " + p5.getFullName(false)); // boolean ALL LOWERCASE
         System.out.println("p5 full name= " + p5.getFullName()); // Original insert
+
+        // Static vs Instance Method
+        // Call Instance Method
+        Person p6 = new Person("Jenny");
+        p6.setLastName("Chan");
+        p6.swim(); // Jenny is swimming
+
+
+        // Call Static Method
+        Person.swimming(); // I'm swimming
     }
+
 
 }

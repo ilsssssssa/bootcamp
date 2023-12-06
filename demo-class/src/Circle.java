@@ -1,8 +1,10 @@
+import java.math.BigDecimal;
+
 public class Circle {
 
   private double radius; // 半徑
 
-  // Empty Constructor
+  // Empty Constructor空構造函數
   public Circle() {
 
   }
@@ -18,15 +20,22 @@ public class Circle {
   public double getRadius() {
     return this.radius;
   }
-// Instance methods
+// Instance methods實例方法
   public double diameter() { //直徑  (=半徑*2)
     return this.radius * 2; // double * int
   }
-
+// Instance methods實例方法
   public double area() { // 半徑*半徑*pi
     // return this. radius * this.radius * 3.14
     // Math library
     return Math.pow(this.radius, 2) * Math.PI;
+  }
+
+
+  // Static Method - tool , 公家, only can use input
+  public static double area(double radius) {
+    return ((BigDecimal.valueOf(radius)).multiply(BigDecimal.valueOf(radius))
+        .multiply(BigDecimal.valueOf(Math.PI)).doubleValue());
   }
 
 
