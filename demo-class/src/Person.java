@@ -39,7 +39,7 @@ public class Person {
     // 3. The return value completely derived衍生 by the input parameters
 
     // Instance Method (Object method)
-    // Setter
+    // Setterl
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

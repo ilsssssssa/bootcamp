@@ -1,7 +1,9 @@
-package day10;
+
 /*
  * Sum up to Zero
  */
+
+import java.util.Arrays;
 
 // Input: n = 5
 // Output: [-7,-1,1,3,4]
@@ -25,11 +27,25 @@ public class JavaQuest16 {
     int[] nums1 = sumToZero(3); // n = 3
     int[] nums2 = sumToZero(2); // n = 2
     int[] nums3 = sumToZero(1); // n = 1
+
+    System.out.println(Arrays.toString(nums));
+    System.out.println(Arrays.toString(nums1));
+    System.out.println(Arrays.toString(nums2));
+    System.out.println(Arrays.toString(nums3));
   }
 
   // Code a method to return int[].
   // 1. All values in this array sum up to Zero.
   // 2. The length of array = n
   // 3. The values in the array has to be unique
-
+  public static int[] sumToZero(int n) {
+    int sum = 0 ;
+    int[] arr = new int[n];
+    for (int i = 0; i < arr.length - 1; i++) { // .length 12345 -> 01234
+      arr[i] = i + 1; // 01234
+      sum += arr[i];
+    }
+    arr[n - 1] = -sum;
+    return arr;
+  }
 }

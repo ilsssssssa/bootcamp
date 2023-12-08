@@ -1,4 +1,4 @@
-package day10;
+
 
 /*
  * Expected Output : 
@@ -29,6 +29,13 @@ public class JavaQuest15 {
 
   public static int percentageLetter(String s, char letter) {
     // code here
-
+    int count = 0;
+    for (int i = 0; i < s.length(); i++) {
+      if (s.charAt(i) == letter) {
+        count++;
+      }
+    }
+    int percentage = (count * 100) / s.length();
+    return percentage;
   }
 }

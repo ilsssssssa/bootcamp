@@ -1,44 +1,95 @@
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class Order {
-  
+
   private int id;
 
   private LocalDate buyDate;
 
-  private double totalAmount;
+  private static int orderNo = 0;
 
-  private int status; // 0 - pending, 1 - completed
+  // private double totalAmount; // derived衍生 by Item[]
 
+  private Item[] items;
 
-  public Order (int id, LocalDate buyDate, double totalAmount) {
-    this.id = id;
+  // private int status; // 0 - pending, 1 - completed
+
+  // public Order(int id, LocalDate buyDate) {
+  // public Order (int id, LocalDate buyDate, double totalAmount) {
+  public Order(LocalDate buyDate) {
+    // this.id = id;
+    this.id = ++orderNo;
     this.buyDate = buyDate;
-    this.totalAmount = totalAmount;
+    this.items = new Item[0];
+    // this.totalAmount = totalAmount;
+  }
+
+  public void addItem(Item item) {
+    Item[] newItems = Arrays.copyOf(this.items, this.items.length + 1);
+    newItems[newItems.length - 1] = item;
+    this.items = newItems;
   }
 
   public int getId() {
     return this.id;
   }
 
-  public double getTotalAmount() {
-    return this.totalAmount;
+  public static double totalAmount(Item[] items) {
+    BigDecimal total = new BigDecimal(0);
+    BigDecimal price = new BigDecimal(0);
+    BigDecimal quantity = new BigDecimal(0);
+    for (int i = 0; i < items.length; i++) {
+      price = BigDecimal.valueOf(items[i].getPrice());
+      quantity = BigDecimal.valueOf(items[i].getQuantity());
+      total = total.add(price.multiply(quantity));
+    }
+    return total.doubleValue();
   }
 
-  public void setTotalAmount(double amount) {
-    this.totalAmount = amount;
+  public double totalAmount() {
+    BigDecimal total = new BigDecimal(0);
+    for (int i = 0; i < this.items.length; i++) {
+      // total = total + item.price * item quantity
+      // this.items[i] -> one item object
+      total = total.add(BigDecimal.valueOf(this.items[i].totalAmount()));
+    }
+    return total.doubleValue();
   }
- 
+
+  // public void setTotalAmount(double amount) {
+  // this.totalAmount = amount;
+  // }
+
   @Override
   public String toString() {
-    return "id= " + id + " ,buyDate= " + buyDate + " ,totalAmount= " + totalAmount;
+    return "Order(id=" + this.id //
+        + ", buyDate=" + this.buyDate //
+        // + ", totalAmount=" + this.totalAmount //
+        + ")";
   }
 
   public static void main(String[] args) {
-    Order order = new Order(1, LocalDate.of(2000, 1, 1), 215);
-    System.out.println(order.toString()); //Order(id= 1 ,buyDate= 2000-01-01 ,totalAmount= 215.0)
+    // how to spilt to 3 lines?
+    // Item[] items =
+    // new Item[] {new Item(10.0, 4, "ABC"), new Item(20.5, 4, "DEF")};
+
+    Order order = new Order(LocalDate.of(2000, 10, 1));
+    order.addItem(new Item(10.0, 4, "ABC"));
+    order.addItem(new Item(20.5, 4, "DEF"));
+
+    Customer customer = new Customer();
+    customer.addOrder(order);
+
+
+    System.out.println(order.toString()); // Order(id=1, buyDate=2000-10-01, totalAmount=2000.0)
+
+    System.out.println("total amount= " + order.totalAmount());
+    System.out.println("total amount2= " + customer.getOrder(1).totalAmount());
 
   }
+
 
 }
