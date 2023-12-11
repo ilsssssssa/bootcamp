@@ -1,6 +1,7 @@
 {
   "java.project.sourcePaths": [
     "demo-class/src",
-    "EXCERCISE"
+    "EXCERCISE",
+    "demo-inheritance/src"
   ]
 }

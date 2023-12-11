@@ -6,6 +6,6 @@ public class Demo {
     // Call Person's constructor
     Person p1 = new Person(); // p1's name -> null, p1's age = 0
 
-    Cat cat = new Cat() ; // empty constructor
+    Cats cat = new Cats() ; // empty constructor
   }
 }
