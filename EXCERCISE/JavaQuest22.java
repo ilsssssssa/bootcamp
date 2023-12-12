@@ -24,10 +24,20 @@ public class JavaQuest22 {
     System.out.println(findDifferent(4568));// output : 937
     System.out.println(findDifferent(9999));// output : 6525
     System.out.println(findDifferent(11111));// output : -4
-
+    
   }
 
   public static int findDifferent(int n) {
     // code here
+    int sum = 0;
+    int product = 1;
+    String s = String.valueOf(n);
+    char[] ch = s.toCharArray();
+
+    for (int i = 0; i < ch.length; i++) {
+      sum += ch[i] - '0';
+      product *= ch[i] - '0' ;
+    }
+    return product - sum;
   }
 }
