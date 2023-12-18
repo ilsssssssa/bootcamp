@@ -1,3 +1,5 @@
+import test.Animal;
+
 public class Cat extends Animal {
 
   // Cat Class ingerit all public attributes, methods
