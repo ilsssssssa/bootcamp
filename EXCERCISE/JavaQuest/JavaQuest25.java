@@ -19,12 +19,15 @@ public class JavaQuest25 {
 
   public static int countWords(String s) {
     // code here ...
-    if (s.trim().isEmpty()) {
-      return 0;
-    }
+    String[] segments = s.trim().split(" ");
+    int count = 0;
 
-    String[] words = s.trim().split("\\s+");
-    return words.length;
+    for(int i = 0; i < segments.length; i++) {
+      if (!s.isBlank()) {
+        count++;
+      }
+    }
+    return count;
   }
 }
 
