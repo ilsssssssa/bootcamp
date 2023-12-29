@@ -8,6 +8,7 @@ public class DemoLinkedList {
      ls.add("XYZ");
      ls.add("IJK");
      System.out.println(ls); // [ABC, XYZ, IJK]
+     
 
      ls.remove(2); // remove by index, much slower than arraylist.remove(index)
      System.out.println(ls); // [ABC, XYZ]

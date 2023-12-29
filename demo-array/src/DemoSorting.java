@@ -21,14 +21,14 @@ public class DemoSorting {
     int key;
     int[] arr2 = new int[] {100, -30, 40, 22, 44};
     for (int i = 1; i < arr2.length; i++) { // start from the 2nd element
-      key = arr2[i];
+      key = arr2[i]; // current element
       j = i;
 
       while (j > 0 && arr2[j - 1] > key) {
-        arr2[j] = arr2[j - 1];
-        j--;       
+        arr2[j] = arr2[j - 1]; // move to right
+        j--;
       } 
-      arr2[j] = key;  
+      arr2[j] = key;
     }
     System.out.println(Arrays.toString(arr2));
 

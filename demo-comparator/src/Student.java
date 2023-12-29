@@ -29,6 +29,7 @@ public class Student implements Comparable<Student> { // interface is a CERT
   // students.add(new Student(29, "John"));
   // System.out.println(students); // [Student(score=40), Student(score=10), Student(score=98), Student(score=29)]
   // Ann 98 -> John 29 -> John 10 -> Peter 40
+
   // @Override
   // public int compareTo(Student s) { // 背！！！
   // return s.getScore() > this.score ? -1 : 1; // -1 : 1 順 || 1 : -1 倒
@@ -51,7 +52,7 @@ public class Student implements Comparable<Student> { // interface is a CERT
 
   @Override
   public String toString() {
-    return "Student(" + "score=" + this.score + ")";
+    return "Student(" + "score=" + this.score + "name=" + this.name + ")";
 
   }
 }

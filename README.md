@@ -63,3 +63,13 @@ N/A
  - Whay if "Object Type" is a parent of "Object Reference Type"?
  - Object obj = new ChildClass(); (What are the implications)
 - Enum
+
+## Week 5
+- DS 
+  - List - ArrayList, LinkedList
+  - Queue - LinkedList, ArrayDeque
+  - Set - HashSet
+  - Map - Hash Map
+  - Stack, PriorityQueue (less important)
+- Hash DS (equals() & hashCode())
+- Comparator & Comparable (Interface Control on method parameter - Collections.sort())
