@@ -1,7 +1,7 @@
 public class DemoDouble {
   public static void main (String args [] ){
 
-    double d1 = 0.2; // If no notation, default it is double value
+    double d1 = 0.2; // If no notation符號, default it is double value
     double d10 = 0.8; // d is the notation of double
     double d2 = 0.3; 
     double d3 = d1 + d2;

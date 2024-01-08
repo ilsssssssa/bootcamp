@@ -52,7 +52,8 @@ public class DemoString {
 
     // charAt()
     // 4 is an index of String
-    // Example: "hello" , h -> index = 0
+    // Example: "hello" , 
+    // h -> index = 0
     // e -> index = 1
     // l -> index = 2
     // l -> index = 3
@@ -66,6 +67,7 @@ public class DemoString {
     // length() charAt()
     int lastCharIndex = s1.length() -1 ; 
     char lastchar = s1.charAt(lastCharIndex);
+    System.out.println("the last index = " + lastCharIndex);
     // Approach 2
     lastchar = s1.charAt(s1.length() -1);
     System.out.println(lastchar) ; // a
